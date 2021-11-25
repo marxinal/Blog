@@ -1,7 +1,7 @@
 ---
 title: "Facial Expression Recognition"
 date: 2021-09-25T23:58:16+01:00
-draft: true
+draft: false
 tags: ["projects"]
 image: "facial.jpeg"
 ---
