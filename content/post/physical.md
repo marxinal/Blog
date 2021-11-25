@@ -2,6 +2,7 @@
 title: "Physical"
 date: 2021-10-25T21:42:00+01:00
 draft: false
+image: "sounds.jpeg"
 ---
 Description: Building a classifier that recognizes different types of physical activity from signals measured by the accelerometer and gyroscope in a smartphone, which both measure aspects of movement and orientation. 
 
