@@ -2,6 +2,7 @@
 title: "Facial"
 date: 2021-11-25T23:58:16+01:00
 draft: true
+tags: ["projects"]
 image: "facial.jpeg"
 ---
 Description: Using data extracted from images to build an algorithm that is able to recognize emotions from photographs from facial expressions. 
