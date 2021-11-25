@@ -1,6 +1,6 @@
 ---
-title: "Facial"
-date: 2021-11-25T23:58:16+01:00
+title: "Facial Expression Recognition"
+date: 2021-09-25T23:58:16+01:00
 draft: true
 tags: ["projects"]
 image: "facial.jpeg"
