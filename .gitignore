@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 public/
+=======
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+>>>>>>> fc03bd82c72b9ec09882de8e3238e06c7b863caf
