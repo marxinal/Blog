@@ -1,5 +1,5 @@
 ---
-title: "Physical"
+title: "Physical Activity Recognition"
 date: 2021-10-25T21:42:00+01:00
 draft: false
 image: "sounds.jpeg"
