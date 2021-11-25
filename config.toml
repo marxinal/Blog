@@ -1,4 +1,4 @@
-baseurl         = ""
+baseurl         = "https://marxinal.github.io/"
 theme           = "casper-two"
 languageCode    = "en-US"
 disqusShortname = ""
@@ -8,7 +8,6 @@ paginate        = 6
 [params]
   title       = "Portofolio"
   subtitle    = "Jelena Kalinic"
-
   cover       = "backgrounddots.jpeg"
   description = "Hello there! Here you will find more about who am I as well as my projects and ongoing research!"
   metaDescription = ""
@@ -27,14 +26,14 @@ paginate        = 6
   pageNotFoundTitle = "404 - Page not found"
 
   #casper or caspertwo
-  singleViewStyle = "caspertwo"
+  singleViewStyle = "casper"
 
 [permalinks]
   post = "/:slug/"
 
 [[menu.main]]
   name = "About me"
-  url = "/"
+  url = "/tags/aboutme"
   weight = 200
 
 [[menu.main]]
@@ -49,7 +48,7 @@ paginate        = 6
 
 [[menu.main]]
   name = "Other"
-  url = "https://google.com/"
+  url = ""
   weight = 95
 
 
