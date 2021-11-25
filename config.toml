@@ -10,8 +10,6 @@ paginate        = 6
   subtitle    = "Jelena Kalinic"
   cover       = "backgrounddots.jpeg"
   description = "Hello there! Here you will find more about who am I as well as my projects and ongoing research!"
-  metaDescription = ""
-  googleAnalytics = ""
   customCSS = []
   RSSLink = ""
 
@@ -26,20 +24,20 @@ paginate        = 6
   pageNotFoundTitle = "404 - Page not found"
 
   #casper or caspertwo
-  singleViewStyle = "casper"
+  singleViewStyle = "caspertwo"
 
 [permalinks]
   post = "/:slug/"
 
 [[menu.main]]
-  name = "About me"
-  url = "/tags/aboutme"
+  name = "Home"
+  url = "/tags/home"
   weight = 200
 
 [[menu.main]]
   name = "Projects"
   url = "/tags/projects/"
-  weight = 200
+  weight = 100
 
 [[menu.main]]
   name = "Hobbies"

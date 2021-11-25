@@ -8,7 +8,7 @@ image: "youtubers.jpeg"
 ---
 Description: Building a model that will predict scores on the Big Five Personality Traits of Youtube Vloggers using different aspects of their videos. 
 
-Data: The YouTube personality dataset consists of a collection of behavorial features, speech transcriptions, and personality impression scores for a set of 404 YouTube vloggers that explicitly show themselves in front of the a webcam talking about a variety of topics including personal issues, politics, movies, books, etc. There is no content-related restriction and the language used in the videos is natural and diverse. For 80 of the 404 vloggers the personality impression scores are missing. The model is used to predict scores for these 80 vloggers.
+Data: The YouTube personality dataset consists of a collection of behavioral features, speech transcriptions, and personality impression scores for a set of 404 YouTube vloggers that explicitly show themselves in front of the a webcam talking about a variety of topics including personal issues, politics, movies, books, etc. There is no content-related restriction and the language used in the videos is natural and diverse. For 80 of the 404 vloggers the personality impression scores are missing. The model is used to predict scores for these 80 vloggers.
 
 **Dependent Variable:** _(Big Five Personality Traits)_  
 - Extraversion
@@ -32,7 +32,7 @@ Features derived from the speech transcript texts:
 - _Number of times the word "um" is used_
   - The first feature is the number of times the words "um", "uhm", and "uh" are used. These are so called filler words to avoid silences. Even though a direct relationship between the use of filler word     could not be shown in earlier research (Laserna et al., 2014), they could still indicate difficulty finding words to say which might be related to for example introversion.
 - _NRC lexicon_
-  -The second feature is the NRC. The NRC is a large database that enables us to associate words with 8 common emotions, which are either negative or positive.
+  - The second feature is the NRC. The NRC is a large database that enables us to associate words with 8 common emotions, which are either negative or positive.
    How much each emotion occurs in a text might tell us something about the personality of the speaker. In earlier research sentiment analysis using NRC was shown to be an effective personality predictor 
    (Christian et al. 2021).
 - _Bing lexicon_
