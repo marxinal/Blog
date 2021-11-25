@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>projects on </title>
+    <link>/tags/projects/</link>
+    <description>Recent content in projects on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 24 Nov 2021 16:35:35 +0100</lastBuildDate><atom:link href="/tags/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Playlist Classification Machine</title>
+      <link>/playlist-classification-machine/</link>
+      <pubDate>Wed, 24 Nov 2021 16:35:35 +0100</pubDate>
+      
+      <guid>/playlist-classification-machine/</guid>
+      <description>Description: Predicting the genre (class) of a playlist using audio features.
+Data: Extracted from the &amp;ldquo;Spotifyr&amp;rdquo; package in R.
+Dependent Variable: (Eight Genres)
+ Rap/HipHop Synth Jazz Anime Openings Pop Classical Music Russian Turbo Polka Frenchcore  Predictors: (Independent Variables/Features)
+ Loudness Speechiness Acousticness Instrumentalness Tempo Liveness Mode Danceability Energy Key Valence Track Popularity  Methods and Models employed:
+Linear Discriminant Analysis (LDA) and Leave One Out Cross-Validation (LOOCV)
+Model Evaluation:</description>
+    </item>
+    
+  </channel>
+</rss>
