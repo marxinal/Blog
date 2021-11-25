@@ -39,7 +39,7 @@ paginate        = 6
 [[menu.main]]
   name = "Projects"
   url = "/tags/projects/"
-  weight = 100
+  weight = 200
 
 [[menu.main]]
   name = "Hobbies"
