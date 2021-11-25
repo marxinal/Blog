@@ -36,7 +36,7 @@ paginate        = 6
 
 [[menu.main]]
   name = "Projects"
-  cover = "backgrounddots.jpeg"
+  image = "backgrounddots.jpeg"
   url = "/tags/projects/"
   weight = 100
 
