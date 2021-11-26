@@ -16,7 +16,10 @@ Data:
 - Possible machine learning algorithms could be QDA, LDA, KNN, Multinomial Regression, Random Forrest, Ridge and Lasso regression. Some of them were used here, and some were left out due to high computational (CPU and RAM) demands.
 
 3. **What is the Bayes' error bound?**  
-Literature suggests that Facial Recognition Algorithms can reach almost perfection with a 99.97% accuracy rate. Derived from: https://www.csis.org/blogs/technology-policy-blog/how-accurate-are-facial-recognition-systems-–-and-why-does-it-matter Whereas, if looking specifically at recognizing one of the four aforementioned emotions, Mollahosseini et al. (2016), suggests the inter rater reliability for recognition is 79.6% for happiness, 69.7% for saddnes, 67.6% for disgust, and 62.3% anger among in total 11 facial expressions. So taken together, our Bayes' error bound should probably be somewhere around 85-90% for the present data set.
+Literature suggests that Facial Recognition Algorithms can reach almost perfection with a 99.97% accuracy rate. Whereas, if looking specifically at recognizing one of the four aforementioned emotions, Mollahosseini et al. (2016), suggests the inter rater reliability for recognition is 79.6% for happiness, 69.7% for saddnes, 67.6% for disgust, and 62.3% anger among in total 11 facial expressions. So taken together, our Bayes' error bound should probably be somewhere around 85-90% for the present data set.
+
+Derived from: 
+https://www.csis.org/blogs/technology-policy-blog/how-accurate-are-facial-recognition-systems-–-and-why-does-it-matter
 
 **Dependent Variable:** _(Four Emotions)_  
 
@@ -109,3 +112,10 @@ Based on the accuracies  the SVM performs the best compared to the other methods
 
 The overall model accuracy employed on a test set was 85%. 
 
+
+References
+
+** **
+Mollahosseini, Ali, David Chan, and Mohammad H. Mahoor. "Going deeper in facial expression recognition using deep neural networks." 2016 IEEE Winter conference on applications of computer vision (WACV). IEEE, 2016.
+
+P. Lucey, J. F. Cohn, T. Kanade, J. Saragih, Z. Ambadar and I. Matthews (2010). The Extended Cohn-Kanade Dataset (CK+): A complete dataset for action unit and emotion-specified expression. IEEE Computer Society Conference on Computer Vision and Pattern Recognition - Workshops, San Francisco, CA, 2010, pp. 94-101, doi: 10.1109/CVPRW.2010.5543262.

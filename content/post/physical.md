@@ -51,7 +51,7 @@ I tried to design features that could help identify the overall signals from the
 - _Power_
   - The power is the probability that the test will find a statistically significant
     difference between the amplitude of the signals. Where it reflects the variance
-    of the amplitude of the signals as Ill as the squared mean summed.
+    of the amplitude of the signals as well as the squared mean summed.
     
 - _MinMax_
   - The difference between largest and smallest value in the histogram which is
@@ -87,7 +87,7 @@ I tried to design features that could help identify the overall signals from the
     measurement.
 
 #### Features that capture specific time domains
-- _Lagged cross-correlations_: 
+- _Lagged cross-correlations_
   - Cross-correlations are very useful in predicting the change of one  signal into
     another,specifically for comparing two times series or one in case of
     autocorrelations to see how Ill they match with one another. High correlations
@@ -139,6 +139,7 @@ Features that capture specific frequencies
     of zero-point crossings (Gangadhar, Giridhar Akula, & Reddy, 2018). 
 
 **Methods and Models employed:** 
+
 I fitted an LDA, KNN, KNNS (knn scaled), and a multinomial and QDA with less features because they only worked that way. When I added more features, the QDA and multinomial stopped working. Important to note is that I chose a K of 10, because Hastie and Tibshirani explained that the best K to choose is between 5 and 10, I went for a K of 10 in order to have large variance in my data. The split of 80/20 was chosen because it was mentioned in the book Introduction to Statistical Learning (James et. al, 2013) that the possibility of bias will become high when there is less data to train on. 
 
 Thus, models and techniques employed were: 
@@ -150,7 +151,7 @@ with K-fold (using 10 folds and a 80/20 split (training set vs test set)
 Additionally, variations of the aforementioned models were employed. Three types mainly: including all features, including only features that did not have high correlations with other features (collinearity), and those where some interaction terms were used (only for LDA). This resulted in 7 different models (LDA_all, LDA_clean, LDA_int, KNN_all, KNN_clean, KNNs_all, and KNNs_clean).
 
 **Model Evaluation and Model Comparison:** 
--LDA was chosen as the final model due to the highest *accuracy* compared to the other models.
+- LDA was chosen as the final model due to the highest *accuracy* compared to the other models.
 
 **Results:** 
 Results on the Kaggle competition showcased a total of 80.915% accuracy.
