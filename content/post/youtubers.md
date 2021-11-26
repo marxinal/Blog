@@ -17,9 +17,7 @@ Data: The YouTube personality dataset consists of a collection of behavioral fea
 - Agreeableness
 - Openess to Experience
 
-
 **Predictors:** _(Independent Variables/Features)_
-
 The predictors stemmed from three different aspects:
 1) Speech transcripts
 2) AudioVisual remarks (behavioural aspects) 
@@ -27,7 +25,7 @@ The predictors stemmed from three different aspects:
 
 Based on the aforementioned, I constructed the following features:
 
-Features derived from the speech transcript texts: 
+#### Features derived from the speech transcript texts: 
 
 - _Number of times the word "um" is used_
   - The first feature is the number of times the words "um", "uhm", and "uh" are used. These are so called filler words to avoid silences. Even though a direct relationship between the use of filler word     could not be shown in earlier research (Laserna et al., 2014), they could still indicate difficulty finding words to say which might be related to for example introversion.
@@ -37,7 +35,7 @@ Features derived from the speech transcript texts:
    (Christian et al. 2021).
 - _Bing lexicon_
   - The third feature is Bing. Bing doesn't allow us to assign emotions to a word but it does let us classify words as positive or negative. The number of words in a text that are positive or negative
-    might also tell us something about the personality of the speaker. Also since the distribution of postive and negative words is different in Bing than in NRC it seems sensible to use both.
+    might also tell us something about the personality of the speaker. Also since the distribution of positive and negative words is different in Bing than in NRC it seems sensible to use both.
 - _Count of Syllables_ 
   - The sixth feature is the number of syllables that each vlogger uses. Earlier research has shown that this is an effective predictor for mainly agreeableness (Metha et al., 2020). Even though this
     study was on written text, this finding might also hold for speech.
@@ -73,4 +71,17 @@ Features derived from the speech transcript texts:
 **Results:**
 
   My model explained 76% of the variance in Big Five Personality Traits scores using a test set. 
+
+
+References
+
+** ** 
+
+Christian, H., Suhartono, D., Chowanda, A., & Zamli, K. Z. (2021). Text based personality prediction from multiple social media data sources using pre-trained language model and model averaging. Journal of Big Data, 8(1). https://doi.org/10.1186/s40537-021-00459-1 <br/><br/>
+Lee, C. H., Kim, K., Seo, Y. S., & Chung, C. K. (2007). The Relations Between Personality and Language Use. The Journal of General Psychology, 134(4), 405–413. https://doi.org/10.3200/genp.134.4.405-414 <br/><br/>
+Laserna, C. M., Seih, Y. T., & Pennebaker, J. W. (2014). Um . . . Who Like Says You Know. Journal of Language and Social Psychology, 33(3), 328–338. https://doi.org/10.1177/0261927x14526993 <br/><br/>
+Mehta, Y., Fatehi, S., Kazameini, A., Stachl, C., Cambria, E., & Eetemadi, S. (2020). Bottom-Up and Top-Down: Predicting Personality with Psycholinguistic and Language Model Features. 2020 IEEE International Conference on Data Mining (ICDM). Published. https://doi.org/10.1109/icdm50108.2020.00146 <br/><br/>
+Scully, I. D., & Terry, C. P. (2011). Self-Referential Memory for the Big-Five Personality Traits. Psi Chi Journal of Psychological Research, 16(3), 123–128. https://doi.org/10.24839/1089-4136.jn16.3.123
+
+
 

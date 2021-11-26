@@ -30,30 +30,66 @@ Literature suggests that Facial Recognition Algorithms can reach almost perfecti
 Here I use histograms of pixel intensities to compute useful features. Here we mostly focus on histogram edges, in particular vertical, horizontal and diagonal. But also: 
 
 1. **Averages (features that capture a specific region of histogram or descriptives):** 
-- Mean 
-- Mode 
-- Median
-- Standard Deviation
-- Variance
+- _Mean_
+- _Mode_
+- _Median_
+- _Standard Deviation_
+- _Variance_
 
 2. **Distributional measures (specific shapes of histogram):**
 
-- Range 
-- Quartiles (25% Quartile Ranges, 75% Quartile Ranges)
-- Kurtosis: This measure describes the specific shape of a particular histogram where this shape is identified by measuring the peakedness of the histogram. If it's a normal distribution the peakedness is 3, which means that the most values are in and around the middle of the distribution. If it is not normal distributed the peakedness of the histogram, ans thus the most values are in the sides.
-- Skewness: Skewness is measured by identifying asymmetry of a particular histogram. The histogram is balanced when there is zero-value. It is on the left tail when it is negative, and it is on theright tail when it is positive.
-- Median Absolute Deviation (MAD): The absolute average distance between the mean and every data point.
+- _Range_
+- _Quartiles_ (25% Quartile Ranges, 75% Quartile Ranges)
+- _Kurtosis_
+  - This measure describes the specific shape of a particular histogram where this
+    shape is identified by measuring the peakedness of the histogram. If it's a
+    normal distribution the peakedness is 3, which means that the most values are in
+    and around the middle of the distribution. If it is not normal distributed the
+    peakedness of the histogram, ans thus the most values are in the sides.
+    
+- _Skewness_ 
+  - Skewness is measured by identifying asymmetry of a particular
+    histogram. The histogram is balanced when there is zero-value. It is on the left
+    tail when it is negative, and it is on theright tail when it is positive.
+    
+- _Median Absolute Deviation (MAD):_
+  - The absolute average distance between the mean and every data point.
 
 3. **Spectral-inspired features:**
-* Power: The power is the probability that the test will find a statistically significant difference between the amplitude of the signals. Where it reflects the variance of the amplitude of the signals as well as the squared mean summed.
-- Energy: The energy is a measure the localized change of the image. Source:          https://stackoverflow.com/questions/4562801/what-is-energy-in-image-processing
-- Full L amplitude: Each point at every (x,y) is called amplitude or intensity of an image. Amplitude image shows how the tip deflected as it encountered sample surface. Images are similar to topography showing the map of the slope of the sample, but Z scale is no in linear units. Using other words, amplitude image is the image of error signal of amf. Source: https://findanyanswer.com/what-is-amplitude-in-image-processing
--Crest factor: Crest factor is a parameter of a waveform, such as alternating current or sound, showing the ratio of peak values to the effective value. In other words, crest factor indicates how extreme the peaks are in a waveform. As such can also be used for analysing histograms of pixel intensity. 
-- Spectral peak: The function spectrum() gives an estimation of the spectrum of a function. In order to be able to derive information about the nature of the function and more about the pixels, we estimated statistical features on the spectrum features. In particular we included spectral peak as our feature.
+
+- _Power_
+  - The power is the probability that the test will find a statistically significant
+    difference between the amplitude of the signals. Where it reflects the variance
+    of the amplitude of the signals as well as the squared mean summed.
+    
+- _Energy_
+  - The energy is a measure the localized change of the image. 
+   Source: 
+   https://stackoverflow.com/questions/4562801/what-is-energy-in-image-processing
+   
+- _Full L amplitude_
+  - Each point at every (x,y) is called amplitude or intensity of an image.
+   Amplitude image shows how the tip deflected as it encountered sample surface.
+   Images are similar to topography showing the map of the slope of the sample, but
+   Z scale is no in linear units. Using other words, amplitude image is the image of
+   error signal of amf. 
+   Source: https://findanyanswer.com/what-is-amplitude-in-image-processing
+  
+- _Crest factor_
+  - Crest factor is a parameter of a waveform, such as alternating current or sound,
+    showing the ratio of peak values to the effective value. In other words, crest
+    factor indicates how extreme the peaks are in a waveform. As such can also be
+    used for analysing histograms of pixel intensity. 
+    
+- _Spectral peak_
+  - The function spectrum() gives an estimation of the spectrum of a function. In
+    order to be able to derive information about the nature of the function and more
+    about the pixels, we estimated statistical features on the spectrum features. In
+    particular we included spectral peak as our feature.
 
 4. **Other strategies:**
 
--Using edge coordinates (horizontal, vertical, and diagonal)
+- Using edge coordinates (horizontal, vertical, and diagonal)
 
 **Methods and Models employed:** 
 

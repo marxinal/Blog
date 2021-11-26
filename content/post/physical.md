@@ -37,47 +37,108 @@ Signals were split into epoches containing 128 samples. I analyzed the histogram
 - The time shift or delation when someone goes from walking slow to fast
 - The amplitute shift where someone goes from taking 'normal steps' to smaller steps. 
 
-I tried to design features that could help identifying the overall signals from the histograms, as well as the shifts that are more difficult to distinguish. Therefore, I designed the following features:
+I tried to design features that could help identify the overall signals from the histograms, as well as the shifts that are more difficult to distinguish. Therefore, I designed the following features:
 
-Features that capture the specific region
-- Mean
-- Mode
-- Median
-- Minimum
-- Maximum
-- Maximum Frequency Index
+#### Features that capture the specific region
+- _Mean_
+- _Mode_
+- _Median_
+- _Minimum_
+- _Maximum_
+- _Maximum Frequency Index_
 
-Features that capture specific spreading
-- _Power_: the power is the probability that the test will find a statistically significant difference between the amplitude of the signals. Where it reflects the variance of the amplitude of the signals as Ill as the squared mean summed.
-- _MinMax_: The difference between largest and smallest value in the histogram which is useful for differentiating between the spreads of the histograms (Bayat, Pomplun & Tran, 2014). 
-- _Mean Absolute Deviation (MAD)_: The absolute average distance between the mean and every data point. 
+#### Features that capture specific spreading
+- _Power_
+  - The power is the probability that the test will find a statistically significant
+    difference between the amplitude of the signals. Where it reflects the variance
+    of the amplitude of the signals as Ill as the squared mean summed.
+    
+- _MinMax_
+  - The difference between largest and smallest value in the histogram which is
+    useful for differentiating between the spreads of the histograms (Bayat, Pomplun
+    & Tran, 2014). 
+    
+- _Mean Absolute Deviation (MAD)_
+  - The absolute average distance between the mean and every data point. 
 
-Features that capture specific statistics
-- Standard Deviation
-- Standard Error
-- Interquartile Ranges
-- 25% Quartile Ranges
-- 75% Quartile Ranges
+#### Features that capture specific statistics
+- _Standard Deviation_
+- _Standard Error_
+- _Interquartile Ranges_
+- _25% Quartile Ranges_
+- _75% Quartile Ranges_
 
-Features that capture specific shapes
-- _Skewness_: Skewness is measured by identifying assymmetry of a particular histogram. The histogram is balanced when there is zero-value. It is on the left tail when it is negative, and it is on the right tail when it is positive. 
-- _Kurtosis_: This measure describes the specific shape of a particular histogram where this shape is identified by measuring the peakedness of the histogram. If it's a normal distribution the peakedness is 3, which means that the most values are in and around the middle of the distribution. If it is not normal distributed the peakedness of the histogram, ans thus the most values are in the sides. 
-- _Entropy_: According to the article "feature extraction from signals" entropy is a important measure of detecting signals and thus I also carried out this measurement.
+#### Features that capture specific shapes
+- _Skewness_
+  - Skewness is measured by identifying assymmetry of a particular histogram. The
+   histogram is balanced when there is zero-value. It is on the left tail when it is
+   negative, and it is on the right tail when it is positive. 
+   
+- _Kurtosis_
+  - This measure describes the specific shape of a particular histogram where this
+    shape is identified by measuring the peakedness of the histogram. If it's a
+    normal distribution the peakedness is 3, which means that the most values are in
+    and around the middle of the distribution. If it is not normal distributed the 
+    peakedness of the histogram, ans thus the most values are in the sides.
+    
+- _Entropy_
+  - According to the article "feature extraction from signals" entropy is a
+    important measure of detecting signals and thus I also carried out this
+    measurement.
 
-Features that capture specific time domains
-- _Lagged cross-correlations_: Cross-correlations are very useful in predicting the change of one  signal into another,specifically for comparing two times series or one in case of autocorrelations to see how Ill they match with one another. High correlations will indicate similarities between signals, whereas low will indicate no relation betIen the phenomena in the signals. This method takes into account time delay and thus allows to match certain signals that might have been overlooked otherwise. These differences thus allowed for further possible feature extraction and disentangling possible differences among signals. In my case, I decided to use different lags in order to cover as many possible scenarios (I used lags of 1, 3, 5, 10). Although it is more likely that as the number of lags increases, the possibility of a match decreases, I still decided to test out a lag of 10 in order to possibly detect any potential matches. Source: https://www.usna.edu/Users/oceano/pguth/md_help/html/time0alq.htm
-- _Correlation_: Computes the overall correlation betIen time series with no particular lags specified.
-- _Amplitude range_: Computes the amplitude range which is the difference betIen the maximum and minimum sample values in a sample window. 
-- _Mean Squared Error (MSE)_: The absolute sum of the signals. Computes the absolute area by taking the sum of the absolute sample values in a vector of signals. I found this was a useful measurement of time (Konsolakis, 2018). 
-- _Mean Frequency Average_: Again Bakram and colleagues (2014) found this to be a good feature of physical activity recognition.
-- _Cosine Angles_: Computes the cosine similarity betIen two vectors without taking into consideration their length. 
+#### Features that capture specific time domains
+- _Lagged cross-correlations_: 
+  - Cross-correlations are very useful in predicting the change of one  signal into
+    another,specifically for comparing two times series or one in case of
+    autocorrelations to see how Ill they match with one another. High correlations
+    will indicate similarities between signals, whereas low will indicate no
+    relation betIen the phenomena in the signals. This method takes into account
+    time delay and thus allows to match certain signals that might have been
+    overlooked otherwise. These differences thus allowed for further possible
+    feature extraction and disentangling possible differences among signals. In my
+    case, I decided to use different lags in order to cover as many possible 
+    cenarios (I used lags of 1, 3, 5, 10). Although it is more likely that as the
+    number of lags increases, the possibility of a match decreases, I still decided
+    to test out a lag of 10 in order to possibly detect any potential matches.  
+    Source: https://www.usna.edu/Users/oceano/pguth/md_help/html/time0alq.htm
+
+- _Correlation_
+  - Computes the overall correlation betIen time series with no particular lags
+    specified.
+
+- _Amplitude range_
+  - Computes the amplitude range which is the difference betIen the maximum and
+    minimum sample values in a sample window. 
+
+- _Mean Squared Error (MSE)_ 
+  - The absolute sum of the signals. Computes the absolute area by taking the sum of
+    the absolute sample values in a vector of signals. I found this was a useful
+    measurement of time (Konsolakis, 2018). 
+
+- _Mean Frequency Average_
+  - Again Bakram and colleagues (2014) found this to be a good feature of physical
+    activity recognition.
+
+- _Cosine Angles_
+  - Computes the cosine similarity betIen two vectors without taking into
+   consideration their length. 
 
 Features that capture specific frequencies
-- _Spectral features_: The function spectrum() gives an estimation of the spectrum of a function. In order to be able to derive information about the nature of the function and more about the physical movements within my frequency domains, I estimated statistical features on the spectrum features. In particular I included features such as: spectral peak of a vector, spectral mean of a vector, spectral standard deviation of a vector, spectral entropy of a vector, spectral skewness and kurtosis of a vector, spectral mode and median of a vector. 
-- _Zero-crossings_: The frequency of certain physical activities crossing a zero-point. Since I assume differenct physical activities and their signals differ in their frequency of zero-point crossings (Gangadhar, Giridhar Akula, & Reddy, 2018). 
+- _Spectral features_
+  - The function spectrum() gives an estimation of the spectrum of a function. In
+   order to be able to derive information about the nature of the function and more
+   about the physical movements within my frequency domains, I estimated statistical
+   features on the spectrum features. In particular I included features such as:
+   spectral peak of a vector, spectral mean of a vector, spectral standard deviation
+   of a vector, spectral entropy of a vector, spectral skewness and kurtosis of a 
+   vector, spectral mode and median of a vector. 
+
+- _Zero-crossings_
+  - The frequency of certain physical activities crossing a zero-point. Since I 
+    assume different physical activities and their signals differ in their frequency
+    of zero-point crossings (Gangadhar, Giridhar Akula, & Reddy, 2018). 
 
 **Methods and Models employed:** 
-
 I fitted an LDA, KNN, KNNS (knn scaled), and a multinomial and QDA with less features because they only worked that way. When I added more features, the QDA and multinomial stopped working. Important to note is that I chose a K of 10, because Hastie and Tibshirani explained that the best K to choose is between 5 and 10, I went for a K of 10 in order to have large variance in my data. The split of 80/20 was chosen because it was mentioned in the book Introduction to Statistical Learning (James et. al, 2013) that the possibility of bias will become high when there is less data to train on. 
 
 Thus, models and techniques employed were: 

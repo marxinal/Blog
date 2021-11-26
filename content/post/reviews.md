@@ -1,6 +1,6 @@
 ---
 title: "Customer Satisfaction from Amazon Reviews"
-date: 2021-11-26T00:41:53+01:00
+date: 2021-10-13T00:41:53+01:00
 draft: false
 tags: ["projects"]
 image: "amazon.jpeg"
@@ -20,7 +20,7 @@ Features were extracted from tokenized (words) text transcripts.
 
 _Actual Feature Engineering_
 
-# Term Frequency - Inverse Document Frequency Features
+#### Term Frequency - Inverse Document Frequency Features
 - The **TF-IDF based on single words**, without filtering for the stopwords
 - The **TF-IDF based on bigrams**, which we also did not filter on stopwords. We found this to be a very useful feature for sentiment analysis (Tan, Wang & Lee, 2002). 
 - The **TF-IDF based on trigrams** also without filtering for the stopwords. Again, trigrams were also found to be useful feature for sentiment analysis (Wu, Li, & Xu, 2006). 
@@ -49,22 +49,31 @@ The motivation for the IDF_t is that the more wide spread the use of a token _t_
 
 Thus, the TFIDF banks on both of these ideas and quantifies the important of a term for a given document.
 
-# Features regarding counts of the Reviews
+#### Features regarding counts of the Reviews
 - **Word Count** per Review
 - **Sentence Count** per Review
 (Ren & Hong, 2017)
 
-# Sentiment Features
-- **The NRC sentiment score**: Lists associations of words with eight emotions (anger, fear, anticipation, trust, surprise, sadness, joy, and disgust) and two sentiments (negative and positive)
-- **The Bing sentiment score**: The bing lexicon categorizes words in a binary fashion into positive and negative categories. 
-- **The Afinn sentiment score**: The Afinn lexicon assignes words with a score between -5 and 5, where negative scores indicate a negative sentiment and positive scores indicate a positive sentiment.
+#### Sentiment Features
+- _The NRC sentiment score_
+   - Lists associations of words with eight emotions (anger, fear, anticipation, trust, surprise, sadness, joy, and disgust) and two sentiments (negative and positive)
+- _The Bing sentiment score_ 
+  - The bing lexicon categorizes words in a binary fashion into positive and negative categories. 
+- _The Afinn sentiment score_ 
+  - The Afinn lexicon assignes words with a score between -5 and 5, where negative scores indicate a negative sentiment and positive scores indicate a positive sentiment.
 
-# Features of specific sentiment words 
-- **Swear Words**: Another valid linguistic correlate of sentiments is swearing (Hashimi, Hafez & Mathkour, 2015)
-- **Negation Words Feature**: Negations are words like no, not, and never. When people want to express the opposite meaning of a particular word or sentence, this is done by inserting a specific negation. Negating words have a correlation with other words in that sentence and we assume they are useful for predicting the sentiments. 
-- **Function Words (Functors) Feature**: These are words that have little lexical meaning or that have ambiguous meaning which express grammatical relationships among other words within a sentence, or specify the attitude or mood of the speaker. Therefore we assumed this to be a feature of use. 
-- **Pronouns Feature**: A pronoun is a word that takes the place of a noun. So words like: "I", "me", "he", "she", "herself", "you", "everybody" etc.
-- **Preposition Feature**: These are words or a group of words that are used before a noun, pronoun, or noun phrase to show direction, time, place, location, spatial relationships, or to introduce an object. These are words like "in," "at," "on," "of," and "to etc. 
+#### Features of specific sentiment words 
+- _Swear Words_
+  - Another valid linguistic correlate of sentiments is swearing (Hashimi, Hafez &
+Mathkour, 2015)
+- _Negation Words Feature_
+  - Negations are words like no, not, and never. When people want to express the opposite meaning of a particular word or sentence, this is done by inserting a specific negation. Negating words have a correlation with other words in that sentence and we assume they are useful for predicting the sentiments. 
+- _Function Words (Functors) Feature_ T
+  - These are words that have little lexical meaning or that have ambiguous meaning which express grammatical relationships among other words within a sentence, or specify the attitude or mood of the speaker. Therefore we assumed this to be a feature of use. 
+- _Pronouns Feature_
+  - A pronoun is a word that takes the place of a noun. So words like: "I", "me", "he", "she", "herself", "you", "everybody" etc.
+- _Preposition Feature_
+  - These are words or a group of words that are used before a noun, pronoun, or noun phrase to show direction, time, place, location, spatial relationships, or to introduce an object. These are words like "in," "at," "on," "of," and "to etc. 
 (Liang, Sun, Sun, & Gao, 2017)
 
 **Methods and Model employed:**
