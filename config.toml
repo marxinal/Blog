@@ -30,25 +30,10 @@ paginate        = 6
   post = "/:slug/"
 
 [[menu.main]]
-  name = "Home"
-  url = "/tags/home"
-  weight = 200
-
-[[menu.main]]
   name = "Projects"
   image = "backgrounddots.jpeg"
   url = "/tags/projects/"
   weight = 100
-
-[[menu.main]]
-  name = "Hobbies"
-  url = "/categories/hobbies/"
-  weight = 99
-
-[[menu.main]]
-  name = "Other"
-  url = ""
-  weight = 95
 
 
 
