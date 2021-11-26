@@ -28,27 +28,26 @@ _Actual Feature Engineering_
 The following process was employed: 
 
 - **document occurence**: 
-    > 0-1 encoding of the presence or absence of a token in a document (here: review)
+    > 0-1 encoding of the presence or absence of a token _t_ in a document _n_(here: review)
     
 - **token counts**: 
-    > simple counts $n_{t,d}$ of each token $t$ within documents $d$ (resulting in a document by term matrix, or DTM)
+    > simple counts of each token _t_ within documents (resulting in a document by   term matrix, or DTM)
 
-- **term frequency ($TF_{d,t}$)**: 
-    > the relative frequency of a term within a document $\displaystyle {n_{d,t} \over  \sum_t n_{d,t}}$
+- **term frequency (TF)**: 
+    > then calculate the relative frequency of a token _t_ within a document _n_ 
 
-- **inverse document frequency ($IDF_t$)**: 
-    > inverse the relative frequency with which a term occurs among the $N$ documents, expressed on a log scale (a measure of 'surprise') as  $-\log\left({DF_t \over N}\right)$ Here $DF_t$ is the number of documents that contain the token $t$.
-
-- **the $TFIDF_{d,t}$**: 
+- **inverse document frequency (IDF)**: 
+    > inverse the relative frequency with which a term occurs among the _N_
+documents, expressed on a log scale (a measure of 'surprise') calculated by dividng the number of documents that contain the token _t_over the number of total number of
+documents (N). 
+- **the TFIDF**: 
     > the product of TF and IDF
+    
+The motivation for TF is simply that the more often a token _t_ occurs in a document, the more likely it is that the topic of the document is closely related to that token. A problem of TF is that it does not take into account that certain words simply occur more frequently because of their role in language (such as 'a', 'but', etc.). 
 
-- **vector space embeddings**: 
-    > advanced features like factor loadings (eigen vectors) from a PCA of the DTM, or "word2vec" representations of words, sentences, and paragraphs (not discussed here), usually obtained by training neural networks on a very large corpus
+The motivation for the IDF_t is that the more wide spread the use of a token _t_ is among all documents, the less likely it conveys information about the topic of any particular document. Hence, the more surprising a word is, the more likely it conveys information about the topic of the document in which it is found. 
 
-
-The motivation for $TF_{d,t}$ is simply that the more often a token $t$ occurs in a document, the more likely it is that the topic of the document is closely related to that token. A problem of $TF_{d,t}$ is that it does not take into account that certain words simply occur more frequently because of their role in language (such as 'a', 'but', etc.). 
-
-The motivation for the $IDF_t$ is that the more wide spread the use of a token $t$ is among all documents, the less likely it conveys information about the topic of any particular document. Hence, the more surprising a word is, the more likely it conveys information about the topic of the document in which it is found. 
+Thus, the TFIDF banks on both of these ideas and quantifies the important of a term for a given document.
 
 # Features regarding counts of the Reviews
 - **Word Count** per Review
