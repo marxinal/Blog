@@ -9,7 +9,7 @@ paginate        = 6
   title       = "Portofolio"
   subtitle    = "Jelena Kalinic"
   cover       = "backgrounddots.jpeg"
-  description = "Hello there! Here you will find more about who am I as well as my projects and ongoing research!"
+  description = "Hello there!"
   customCSS = []
   RSSLink = ""
 
