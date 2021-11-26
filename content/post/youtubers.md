@@ -8,10 +8,6 @@ image: "youtubers.jpeg"
 ---
 Description: Building a model that will predict scores on the Big Five Personality Traits of Youtube Vloggers using different aspects of their videos. 
 
-Can I really make a model that will predict Youtuber's personality scores? 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YkiGd2yEZtE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 Data: The YouTube personality dataset consists of a collection of behavioral features, speech transcriptions, and personality impression scores for a set of 404 YouTube vloggers that explicitly show themselves in front of the a webcam talking about a variety of topics including personal issues, politics, movies, books, etc. There is no content-related restriction and the language used in the videos is natural and diverse. For 80 of the 404 vloggers the personality impression scores are missing. The model is used to predict scores for these 80 vloggers.
 
 **Dependent Variable:** _(Big Five Personality Traits)_  
