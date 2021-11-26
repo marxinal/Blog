@@ -8,6 +8,10 @@ image: "youtubers.jpeg"
 ---
 Description: Building a model that will predict scores on the Big Five Personality Traits of Youtube Vloggers using different aspects of their videos. 
 
+Can I really make a model that will predict Youtuber's personality scores? 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YkiGd2yEZtE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Data: The YouTube personality dataset consists of a collection of behavioral features, speech transcriptions, and personality impression scores for a set of 404 YouTube vloggers that explicitly show themselves in front of the a webcam talking about a variety of topics including personal issues, politics, movies, books, etc. There is no content-related restriction and the language used in the videos is natural and diverse. For 80 of the 404 vloggers the personality impression scores are missing. The model is used to predict scores for these 80 vloggers.
 
 **Dependent Variable:** _(Big Five Personality Traits)_  
@@ -73,14 +77,19 @@ Based on the aforementioned, I constructed the following features:
   My model explained 76% of the variance in Big Five Personality Traits scores using a test set. 
 
 
+
 References
 
 ** ** 
 
 Christian, H., Suhartono, D., Chowanda, A., & Zamli, K. Z. (2021). Text based personality prediction from multiple social media data sources using pre-trained language model and model averaging. Journal of Big Data, 8(1). https://doi.org/10.1186/s40537-021-00459-1 <br/><br/>
+
 Lee, C. H., Kim, K., Seo, Y. S., & Chung, C. K. (2007). The Relations Between Personality and Language Use. The Journal of General Psychology, 134(4), 405–413. https://doi.org/10.3200/genp.134.4.405-414 <br/><br/>
+
 Laserna, C. M., Seih, Y. T., & Pennebaker, J. W. (2014). Um . . . Who Like Says You Know. Journal of Language and Social Psychology, 33(3), 328–338. https://doi.org/10.1177/0261927x14526993 <br/><br/>
+
 Mehta, Y., Fatehi, S., Kazameini, A., Stachl, C., Cambria, E., & Eetemadi, S. (2020). Bottom-Up and Top-Down: Predicting Personality with Psycholinguistic and Language Model Features. 2020 IEEE International Conference on Data Mining (ICDM). Published. https://doi.org/10.1109/icdm50108.2020.00146 <br/><br/>
+
 Scully, I. D., & Terry, C. P. (2011). Self-Referential Memory for the Big-Five Personality Traits. Psi Chi Journal of Psychological Research, 16(3), 123–128. https://doi.org/10.24839/1089-4136.jn16.3.123
 
 

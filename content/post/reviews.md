@@ -18,9 +18,10 @@ Level of satisfaction of customers, ranging from 1 to 5.
 
 Features were extracted from tokenized (words) text transcripts.
 
-_Actual Feature Engineering_
+The constructed features:
 
 #### Term Frequency - Inverse Document Frequency Features
+
 - The **TF-IDF based on single words**, without filtering for the stopwords
 - The **TF-IDF based on bigrams**, which we also did not filter on stopwords. We found this to be a very useful feature for sentiment analysis (Tan, Wang & Lee, 2002). 
 - The **TF-IDF based on trigrams** also without filtering for the stopwords. Again, trigrams were also found to be useful feature for sentiment analysis (Wu, Li, & Xu, 2006). 
@@ -50,9 +51,8 @@ The motivation for the IDF_t is that the more wide spread the use of a token _t_
 Thus, the TFIDF banks on both of these ideas and quantifies the important of a term for a given document.
 
 #### Features regarding counts of the Reviews
-- **Word Count** per Review
-- **Sentence Count** per Review
-(Ren & Hong, 2017)
+- _Word Count_ per Review
+- _Sentence Count_ per Review (Ren & Hong, 2017)
 
 #### Sentiment Features
 - _The NRC sentiment score_
